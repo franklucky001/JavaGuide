@@ -35,7 +35,7 @@ CAP 理论的提出者布鲁尔在提出 CAP 猜想的时候，并没有详细�
 
 **什么是网络分区？**
 
-分布式系统中，多个节点之前的网络本来是连通的，但是因为某些故障（比如部分节点网络出了问题）某些节点之间不连通了，整个网络就分成了几块区域，这就叫 **网络分区**。
+分布式系统中，多个节点之间的网络本来是连通的，但是因为某些故障（比如部分节点网络出了问题）某些节点之间不连通了，整个网络就分成了几块区域，这就叫 **网络分区**。
 
 ![partition-tolerance](https://oss.javaguide.cn/2020-11/partition-tolerance.png)
 
@@ -91,7 +91,7 @@ ZooKeeper 通过可线性化（Linearizable）写入、全局 FIFO 顺序访问�
 
 1. [CAP 定理简化](https://medium.com/@ravindraprasad/cap-theorem-simplified-28499a67eab4) （英文，有趣的案例）
 2. [神一样的 CAP 理论被应用在何方](https://juejin.im/post/6844903936718012430) （中文，列举了很多实际的例子）
-3. [请停止呼叫数据库 CP 或 AP ](https://martin.kleppmann.com/2015/05/11/please-stop-calling-databases-cp-or-ap.html) （英文，带给你不一样的思考）
+3. [请停止呼叫数据库 CP 或 AP](https://martin.kleppmann.com/2015/05/11/please-stop-calling-databases-cp-or-ap.html) （英文，带给你不一样的思考）
 
 ## BASE 理论
 
@@ -141,9 +141,7 @@ CAP 理论这节我们也说过了：
 > 分布式一致性的 3 种级别：
 >
 > 1. **强一致性**：系统写入了什么，读出来的就是什么。
->
 > 2. **弱一致性**：不一定可以读取到最新写入的值，也不保证多少时间之后读取到的数据是最新的，只是会尽量保证某个时刻达到数据一致的状态。
->
 > 3. **最终一致性**：弱一致性的升级版，系统会保证在一定时间内达到数据一致的状态。
 >
 > **业界比较推崇是最终一致性级别，但是某些对数据一致要求十分严格的场景比如银行转账还是要保证强一致性。**
@@ -159,3 +157,5 @@ CAP 理论这节我们也说过了：
 ### 总结
 
 **ACID 是数据库事务完整性的理论，CAP 是分布式系统设计理论，BASE 是 CAP 理论中 AP 方案的延伸。**
+
+<!-- @include: @article-footer.snippet.md -->
